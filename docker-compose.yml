@@ -1,0 +1,15 @@
+services:
+  nextjs:
+    build: .
+    container_name: nextjs
+    restart: unless-stopped
+    ports:
+      - "3000:3000" # hanya lokal, cloudflare yang publish
+    environment:
+      - NODE_ENV=production
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-nextjs
+    command: tunnel --no-autoupdate run --token eyJhIjoiMTE5Nzg5NjhiYTIwNGQzNzdlM2NkZDA3Njc5YjU4OTYiLCJ0IjoiNTk1MDYzYWItZjU5NS00Nzc1LWI5NTMtMjViMThkZGFiYTI0IiwicyI6Ik5EVmtNMkk1TmpJdFl6VTNZaTAwTjJVeExUaGxabVF0WTJSaFltWTFZMlk1TkRSbSJ9
+    restart: always
