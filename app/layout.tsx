@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "About Me | Nazwa",
+  title: "Radio Sebayu 94 FM",
   icons: [
-    { rel: "icon", url: "/cat.svg", type: "image/svg+xml" }, // favicon utama
-    { rel: "icon", url: "/cat.png", type: "image/png" },     // fallback PNG
+    { rel: "icon", url: "/sebayu.svg", type: "image/svg+xml" }, // favicon utama
+    { rel: "icon", url: "/sebayu.png", type: "image/png" },     // fallback PNG
     { rel: "apple-touch-icon", url: "/cat.png" },            // untuk iOS Safari
   ],
 };
